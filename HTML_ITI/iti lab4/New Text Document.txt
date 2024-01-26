@@ -1,0 +1,3 @@
+str= new String"the quick brown fox"
+console.log(str)
+str.split()

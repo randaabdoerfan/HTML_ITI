@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+	body{
+		background:linear-gradient(to left ,red, pink);
+	}
+	button{
+		cursor: pointer;
+	}
+</style>
+
+	<title>Question 4 (Color Gradient)</title>
+</head>
+<body >
+	<div>
+		<input type="color" id="color1" name="color1"value="#00ff00">
+		<input type="color" id="color2"name="color2"  value="#002300">
+		<button id="auto">Auto</button>
+		<button id="stop">stop</button>
+
+	</div>
+	<script type="text/javascript">
+    var color1 = document.getElementById("color1");
+    var color2 = document.getElementById("color2");
+    var body = document.querySelector("body");
+    var auto = document.getElementById("auto");
+    var stop = document.getElementById("stop");
+
+    function setGradient() {
+        body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value + ")";
+        
+    }
+
+    function randomColor() {
+        var newColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+        return newColor;
+    }
+
+    function randomGradient() {
+        color1.value = randomColor();
+        color2.value = randomColor();
+        setGradient();
+    }
+
+    color1.addEventListener("input", setGradient)
+    color2.addEventListener("input", setGradient)
+    auto.addEventListener("click", function() {
+        interval = setInterval(randomGradient, 500);
+    })
+    stop.addEventListener("click",function(){
+		clearTimeout(interval)
+		});
+		
+		console.log("linear-gradient(to left, "+color1.value+ ", "+ color2.value+");");
+
+
+	</script>
+
+
+</body>
+</html>

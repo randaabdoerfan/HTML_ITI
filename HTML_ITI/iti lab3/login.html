@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-image: url(pics/1.jpg);
+			background-repeat: repeat-x;
+			background-attachment: fixed;
+		}
+		table{
+			background-color: #D3D3D3;
+			text-align: center;
+			width: 330px;
+			height: 300px;
+			margin: 100px auto;
+			padding: 10px;
+			border-radius: 20%;
+			
+
+		}
+		input{
+			display: inline-block;
+			background-color: #D3D3D3;
+			font-size: 17px;
+			width: 80%;
+			padding: 10px;
+			border: 0;
+			outline:0;
+		}
+		input[type="text"]:hover{
+			border-bottom: 3px solid black;
+
+		}
+		input[type="password"]:hover{
+			border-bottom: 4px solid black;
+		}
+		.s1{
+			width: 80px;
+			height: 50px;
+			background-color: #B885CB;
+			border-radius: 40%;
+		}
+
+		.s2:hover{
+			background-color: #B885CB;
+			border-radius: 40%;
+
+		}
+		input[type="submit"]{
+			width: 80px;
+			height: 50px;
+
+		}
+		img{
+			border-radius: 10%;
+			text-align: top;
+
+		}
+	</style>
+	
+	<title>Login</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>
+			<img src="pics/user.png"></th>
+		</tr>
+		<tr>
+			<th>
+			    <input type="text" name="username" placeholder="Enter Your Username" />
+		    </th>
+		</tr>
+		<tr>
+			<th><img src="pics/pass.png"></th>
+		</tr>
+		<tr>
+			<th>
+				<input type="password" name="password" placeholder="Enter Your Passwrd">
+			</th>
+		</tr>
+		<tr>
+			<td><form  action="home.html">
+				<input class="s1" type="submit" name="Login" value="Login"></form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<form action="signup.html">
+					<input class="s2" type="submit" name="signup" value="Sign Up"></form>
+			</td>
+		</tr>
+
+
+	</table>
+
+
+</body>
+</html>

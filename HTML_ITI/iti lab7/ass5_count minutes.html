@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		div{
+			text-align: center;
+			background-color: #D5D5CC;
+		}
+	</style>
+	<title>(Bouns)Counter minute</title>
+</head>
+<body>
+	<div id="div"></div>
+	<button id="start">Strat</button>
+	<button id="stop">Stop</button>
+	<script>
+		var div =document.getElementById("div")
+		start=document.getElementById("start")
+		stop=document.getElementById("stop")
+		
+		second=0
+		minute=0
+		div.style.width='100px'
+		div.style.height='30px'
+		div.style.align='center';
+		div.innerHTML= "00 : 00"
+		start.addEventListener("click", function(){
+			    time=setInterval( time,1000)
+
+		})
+			function time(){
+		    	if (second<9) {
+		    	    second++;
+		    	    second_time1="0"+second
+			        minute_time1="0"+minute
+		    	    div.innerHTML =minute_time1+" : "+second_time1		    	 
+		    	}
+
+		         if (second>=9 & second<60){
+		         	second++;
+				    minute_time2="0"+minute
+			        second_time2=second
+				    div.innerHTML=minute_time2+" : " +second_time2 
+				}
+				
+				if (second == 59){
+	   	             second=0
+		   	    	minute++;
+	   	  		   second_time3="0"+second
+	   	           minute_time3="0"+minute
+	   	  	       div.innerHTML =minute_time3+" : "+second_time3
+	   	  	    }
+
+		        }
+		    
+		    stop.addEventListener("click",function(){
+		        clearTimeout(time)
+
+		    })
+
+	   	  
+	   	
+	</script>
+	
+		
+
+</body>
+</html>

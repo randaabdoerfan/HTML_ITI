@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script > 
+		numbers=[3,1,4,5,2];
+		function sum(numbersArray){
+			arr1=eval(numbersArray.join("+"))
+			console.log(arr1)
+		}
+
+     sum(numbers);
+
+
+   
+     function sumAll() {
+       sum = 0;
+      console.log(arguments)
+      for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+      }
+      console.log(`sum = ${sum}`)
+
+     }
+     sumAll(3,1,4,5,2);
+
+    </script>
+	<title>ass2</title>
+</head>
+<body>
+
+</body>
+</html>
